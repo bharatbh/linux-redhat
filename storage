@@ -1,0 +1,16 @@
+##Find HBA installed in redhat.
+##
+# lspci | grep -i Fib
+08:00.0 Fibre Channel: QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA (rev 02)
+08:00.1 Fibre Channel: QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA (rev 02)
+0f:00.0 Fibre Channel: QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA (rev 02)
+0f:00.1 Fibre Channel: QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA (rev 02)
+
+
+##Find WWN for each adapter.
+##
+# cat /sys/class/fc_host/host[0-4]/port_name
+0x21000024ff3e3ff4
+0x21000024ff3e3ff5
+0x21000024ff3e401c
+0x21000024ff3e401d
